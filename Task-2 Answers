@@ -1,0 +1,12 @@
+SELECT ename, sal * 12 AS annual_salary FROM emp;
+SELECT ename, job, sal / 2 AS half_term_salary FROM emp;
+SELECT emp.*, sal * 12 + 2000 AS annual_salary_with_bonus FROM emp;
+SELECT ename, sal, sal + (sal * 10 / 100) AS hike_salary FROM emp;
+SELECT ename, sal, sal - (sal * 25 / 100) AS salary_after_deduction FROM emp;
+SELECT ename, sal, sal + 50 AS salary_after_hike FROM emp;
+SELECT ename, sal * 12 AS annual_salary,
+       (sal * 12) - ((sal * 12) * 10 / 100) AS annual_salary_after_deduction
+FROM emp;
+SELECT ename, sal, comm, sal + COALESCE(comm, 0) AS total_salary FROM emp;
+SELECT emp.*, sal * 12 AS annual_salary FROM emp;
+SELECT ename, job, sal - 100 AS salary_after_penalty FROM emp;
